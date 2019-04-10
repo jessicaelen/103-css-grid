@@ -2,31 +2,78 @@ body{
     margin: 0;
     display: grid;
     grid-template-areas: 'header header header header'
-                         'navbar navbar navbar navbar'
+                         'navbar navbar navbar aside'
                          'section section section aside'
                          'footer footer footer footer';
-    grid-template-rows: 20vh 5vh 50vh 30vh;
+    grid-template-rows: 20vh 5vh 70vh 10vh;
     grid-gap: 5px;
+    grid-template-columns: 24vw 24vw 24vw 24vw;
 
 }
 header{
     grid-area: header;
-    background-color: aquamarine;
+    background-color: #e4245a;
+    display: flex;
+    justify-content: center;
+}
+header img{
+    height: 100%;
+    width: 115px;
+    border-radius: 100%;
+    
 }
 nav{
     grid-area: navbar;
-    background-color: blue;
+    background-color: rgb(226, 146, 219);
+    display: flex;
+    justify-content: space-around;
+
+}
+
+nav a{
+    color:black;
+    text-decoration: none;
+    font-size: 16pt;
+    font-family: 'Gochi Hand', cursive;
+
+}
+
+nav a :hover{
+    color: aquamarine;
+
 }
 section{
     grid-area: section;
-    background-color: blueviolet;
+    background-color: black;
+    background-image: url(images/logo.jpg);
+    background-size: cover;
+}
+section div input{
+    display: flex;
+    justify-content: center;
 }
 aside{
     grid-area: aside;
-    background-color: chartreuse;
+    background-color: rosybrown;
+    text-align: center;
+    padding:15px;
+    font-family: 'Gochi Hand', cursive;
+}
+aside h2,p{
+    color:black;
 }
 footer{
     grid-area: footer;
     background-color: tomato;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+footer div{
+    width: 200px;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+
+}
